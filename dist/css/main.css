@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  text-align: center;
+  display: flex;
+  background-image: url("/images/bg-intro-mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #ff7a7a;
+  color: white;
+}
+
+.container {
+  padding: 6rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 4.5rem;
+}
+
+.hero {
+  outline: 1px solid green;
+}
+
+.hero h2 {
+  max-width: 70%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-weight: 400;
+}
+
+.action-wrap {
+  outline: 1px solid red;
+  font-size: 0.825rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+}
+
+.action-wrap .trial-btn {
+  background-color: #6055a5;
+  color: white;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  padding: 1rem 0;
+  box-shadow: 0px 10px 7px -1px rgba(0, 0, 0, 0.49);
+  font-size: 1rem;
+  text-align: center;
+}
+
+.action-wrap .trial-btn span {
+  font-weight: 600;
+}
+
+.action-wrap .form-control {
+  background-color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.action-wrap .form-control input {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  padding-left: 1.2rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  border: 1px solid #b9b6d3;
+}
+
+.action-wrap .form-control input::placeholder {
+  font-weight: 600;
+}
+
+.action-wrap .submit-btn {
+  width: 100%;
+  background-color: #38cc8c;
+  border: none;
+  border-radius: 8px;
+  padding: 1rem 2rem;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-bottom: 3px rgba(60, 60, 60, 0.261) solid;
+}
+
+.action-wrap .submit-btn p {
+  transform: translateY(3px);
+}
+
+.action-wrap .terms {
+  color: #b9b6d3;
+  font-size: 12px;
+  padding: 0.5rem;
+  font-weight: 400;
+}
+
+.action-wrap .terms .terms-link {
+  text-decoration: none;
+  color: #ff7a7a;
+  font-weight: 600;
+}

@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+@import "base/reset";
+@import "base/variables";
+
+body {
+   font-family: $ff;
+   font-size: $fs-rg;
+   text-align: center;
+   display: flex;
+
+   background-image: url("/images/bg-intro-mobile.png");
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-color: $bg-red;
+   color: white;
+}
+
+.container {
+   padding: 6rem 1.5rem;
+   display: flex;
+   flex-direction: column;
+   row-gap: 4.5rem;
+}
+
+.hero {
+   outline: 1px solid green;
+
+   h2 {
+      max-width: 70%;
+      margin-right: auto;
+      margin-left: auto;
+      margin-bottom: 1rem;
+   }
+
+   p {
+      font-weight: 400;
+   }
+}
+
+.action-wrap {
+   outline: 1px solid red;
+   font-size: $fs-sm;
+   display: flex;
+   flex-direction: column;
+   row-gap: 1.5rem;
+
+   .trial-btn {
+      background-color: $bt-blue;
+      color: white;
+      width: 100%;
+      border: none;
+      border-radius: 8px;
+      padding: 1rem 0;
+      box-shadow: 0px 10px 7px -1px rgba(0, 0, 0, 0.49);
+      font-size: $fs-rg;
+      text-align: center;
+
+      span {
+         font-weight: 600;
+      }
+   }
+
+   .form-control {
+      background-color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 1.5rem;
+
+      input {
+         width: 100%;
+         padding: 1rem 1.5rem;
+         padding-left: 1.2rem;
+         margin-bottom: 1rem;
+         border-radius: 8px;
+         border: 1px solid $grayish-blue;
+
+         &::placeholder {
+            font-weight: 600;
+         }
+      }
+   }
+
+   .submit-btn {
+      width: 100%;
+      background-color: $bt-green;
+      border: none;
+      border-radius: 8px;
+      padding: 1rem 2rem;
+      color: white;
+      text-transform: uppercase;
+      font-weight: 600;
+      letter-spacing: 1px;
+      border-bottom: 3px rgba(60, 60, 60, 0.261) solid;
+
+      p {
+         transform: translateY(3px);
+      }
+   }
+   .terms {
+      // outline: 1px solid red;
+      color: $grayish-blue;
+      font-size: 12px;
+      padding: 0.5rem;
+      font-weight: 400;
+
+      .terms-link {
+         text-decoration: none;
+         color: $bg-red;
+         font-weight: 600;
+      }
+   }
+}
