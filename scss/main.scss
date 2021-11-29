@@ -39,13 +39,13 @@ body {
 }
 
 .action-wrap {
-   outline: 1px solid red;
+   // outline: 1px solid red;
    font-size: $fs-sm;
    display: flex;
    flex-direction: column;
    row-gap: 1.5rem;
 
-   .trial-btn {
+   .trial-banner {
       background-color: $bt-blue;
       color: white;
       width: 100%;
@@ -61,7 +61,7 @@ body {
       }
    }
 
-   .form-control {
+   .form {
       background-color: white;
       border: none;
       border-radius: 8px;
@@ -71,12 +71,33 @@ body {
          width: 100%;
          padding: 1rem 1.5rem;
          padding-left: 1.2rem;
+         padding-right: 1.2rem;
          margin-bottom: 1rem;
          border-radius: 8px;
          border: 1px solid $grayish-blue;
 
          &::placeholder {
             font-weight: 600;
+         }
+
+         &:focus {
+            outline: 0;
+            border-color: #777;
+         }
+      }
+
+      .form-control {
+         position: relative;
+         // outline: 1px solid red;
+
+         i {
+            position: absolute;
+            width: $fs-rg;
+            right: 1.2rem;
+            top: calc(50% - 1rem);
+
+            // visibility: hidden;
+            visibility: visible;
          }
       }
    }
@@ -89,12 +110,19 @@ body {
       padding: 1rem 2rem;
       color: white;
       text-transform: uppercase;
-      font-weight: 600;
+      font-weight: 500;
       letter-spacing: 1px;
       border-bottom: 3px rgba(60, 60, 60, 0.261) solid;
 
       p {
+         font-size: $fs-rg;
          transform: translateY(3px);
+      }
+
+      &:hover {
+         cursor: pointer;
+         transition: 0.3s;
+         opacity: 0.85;
       }
    }
    .terms {
@@ -108,6 +136,12 @@ body {
          text-decoration: none;
          color: $bg-red;
          font-weight: 600;
+
+         &:hover {
+            cursor: pointer;
+            opacity: 0.85;
+            transition: 0.3s;
+         }
       }
    }
 }

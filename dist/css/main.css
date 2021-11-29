@@ -113,14 +113,13 @@ body {
 }
 
 .action-wrap {
-  outline: 1px solid red;
   font-size: 0.825rem;
   display: flex;
   flex-direction: column;
   row-gap: 1.5rem;
 }
 
-.action-wrap .trial-btn {
+.action-wrap .trial-banner {
   background-color: #6055a5;
   color: white;
   width: 100%;
@@ -132,28 +131,46 @@ body {
   text-align: center;
 }
 
-.action-wrap .trial-btn span {
+.action-wrap .trial-banner span {
   font-weight: 600;
 }
 
-.action-wrap .form-control {
+.action-wrap .form {
   background-color: white;
   border: none;
   border-radius: 8px;
   padding: 1.5rem;
 }
 
-.action-wrap .form-control input {
+.action-wrap .form input {
   width: 100%;
   padding: 1rem 1.5rem;
   padding-left: 1.2rem;
+  padding-right: 1.2rem;
   margin-bottom: 1rem;
   border-radius: 8px;
   border: 1px solid #b9b6d3;
 }
 
-.action-wrap .form-control input::placeholder {
+.action-wrap .form input::placeholder {
   font-weight: 600;
+}
+
+.action-wrap .form input:focus {
+  outline: 0;
+  border-color: #777;
+}
+
+.action-wrap .form .form-control {
+  position: relative;
+}
+
+.action-wrap .form .form-control i {
+  position: absolute;
+  width: 1rem;
+  right: 1.2rem;
+  top: calc(50% - 1rem);
+  visibility: visible;
 }
 
 .action-wrap .submit-btn {
@@ -164,13 +181,20 @@ body {
   padding: 1rem 2rem;
   color: white;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: 1px;
   border-bottom: 3px rgba(60, 60, 60, 0.261) solid;
 }
 
 .action-wrap .submit-btn p {
+  font-size: 1rem;
   transform: translateY(3px);
+}
+
+.action-wrap .submit-btn:hover {
+  cursor: pointer;
+  transition: 0.3s;
+  opacity: 0.85;
 }
 
 .action-wrap .terms {
@@ -184,4 +208,10 @@ body {
   text-decoration: none;
   color: #ff7a7a;
   font-weight: 600;
+}
+
+.action-wrap .terms .terms-link:hover {
+  cursor: pointer;
+  opacity: 0.85;
+  transition: 0.3s;
 }
