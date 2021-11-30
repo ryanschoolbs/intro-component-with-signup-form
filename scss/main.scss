@@ -96,11 +96,49 @@ body {
             right: 1.2rem;
             top: calc(50% - 1rem);
 
-            // visibility: hidden;
+            visibility: hidden;
+            // visibility: visible;
+         }
+
+         small {
+            position: absolute;
+            font-size: 0.512rem;
+            color: $bg-red;
+            font-style: italic;
+            bottom: 2.5px;
+            right: 2px;
+            font-weight: 400;
+            visibility: hidden;
+         }
+      }
+   }
+
+   // form control success or error
+
+   .form-control {
+      &.success {
+         input {
+            border-color: #2ecc71;
+         }
+      }
+
+      &.error {
+         input {
+            border-color: #e74c3c;
+            // visibility: visible;
+         }
+
+         i {
+            visibility: visible;
+         }
+
+         small {
             visibility: visible;
          }
       }
    }
+
+   // ----------------------------------------
 
    .submit-btn {
       width: 100%;
@@ -111,8 +149,9 @@ body {
       color: white;
       text-transform: uppercase;
       font-weight: 500;
-      letter-spacing: 1px;
+      letter-spacing: 0.5px;
       border-bottom: 3px rgba(60, 60, 60, 0.261) solid;
+      cursor: pointer;
 
       p {
          font-size: $fs-rg;
