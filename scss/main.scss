@@ -21,13 +21,17 @@ body {
    display: flex;
    flex-direction: column;
    row-gap: 4.5rem;
+   margin-right: auto;
+   margin-left: auto;
 }
 
 .hero {
-   outline: 1px solid green;
+   // outline: 1px solid green;
+   max-width: 500px;
 
    h2 {
-      max-width: 70%;
+      font-size: 1.75rem;
+      max-width: 90%;
       margin-right: auto;
       margin-left: auto;
       margin-bottom: 1rem;
@@ -164,6 +168,7 @@ body {
          opacity: 0.85;
       }
    }
+
    .terms {
       // outline: 1px solid red;
       color: $grayish-blue;
@@ -181,6 +186,132 @@ body {
             opacity: 0.85;
             transition: 0.3s;
          }
+      }
+   }
+}
+
+@media (min-width: 468px) {
+   body {
+      font-size: $fs-md;
+   }
+
+   .hero {
+      h2 {
+         font-size: 2.25rem;
+         margin-bottom: 1.5rem;
+      }
+   }
+}
+
+@media (min-width: 768px) {
+   .action-wrap {
+      .trial-banner {
+         font-size: $fs-md;
+      }
+
+      row-gap: 2.5rem;
+
+      .form {
+         padding: 2rem;
+
+         input {
+            @media (min-width: 768px) {
+               margin-bottom: 1.75rem;
+               font-size: $fs-md;
+            }
+         }
+
+         .form-control {
+            i {
+               position: absolute;
+               width: $fs-md;
+               right: 1.2rem;
+               top: calc(50% - 1.5rem);
+
+               // visibility: visible;
+            }
+
+            small {
+               font-size: $fs-rg;
+            }
+         }
+      }
+
+      .submit-btn {
+         P {
+            font-size: $fs-md;
+         }
+      }
+
+      .terms {
+         // outline: 1px solid red;
+         max-width: 300px;
+         font-size: 14px;
+         margin-right: auto;
+         margin-left: auto;
+      }
+   }
+}
+
+// desktop
+
+@media only screen and (min-width: 1024px) {
+   body {
+      background-image: url("/images/bg-intro-desktop.png");
+   }
+
+   .container {
+      margin-bottom: auto;
+      margin-top: auto;
+      flex-direction: row;
+      align-items: center;
+      column-gap: 5rem;
+      row-gap: 0;
+   }
+
+   .hero {
+      text-align: left;
+
+      h2 {
+         font-size: 3rem;
+         margin-left: 0;
+      }
+
+      p {
+         font-size: 1.5rem;
+      }
+   }
+
+   .action-wrap {
+      row-gap: 1.75rem;
+   }
+}
+
+@media (min-width: 1280px) {
+   .action-wrap {
+      // outline: 1px solid red;
+
+      width: 40vw;
+
+      .trial-banner {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         column-gap: 5px;
+      }
+
+      .submit-btn {
+         P {
+            font-size: $fs-md;
+         }
+      }
+
+      .terms {
+         // outline: 1px solid red;
+         max-width: 600px;
+         font-size: 14px;
+         margin-right: auto;
+         margin-left: auto;
       }
    }
 }
